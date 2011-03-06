@@ -5,7 +5,7 @@ name 'Amon2-Plugin-Web-FillInForm';
 all_from 'lib/Amon2/Plugin/Web/FillInForm.pm';
 
 requires(
-    'Amon2'            => '2.27',
+    'Amon2'            => '2.28',
     'HTML::FillInForm' => '2.00',
 );
 
