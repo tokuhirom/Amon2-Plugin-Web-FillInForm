@@ -48,14 +48,16 @@ my $c = MyApp::Web->bootstrap();
 
 subtest 'new style' => sub {
     my $res = MyApp::Web->to_app()->(+{});
-    like $res->[2]->[0], qr{<input value="hello" name="body" type="text" />};
+    my ($input) = ($res->[2]->[0] =~ qr{(<input[^.>]+name="body"[^.>]+>)});
+    like $input, qr{value="hello"};
     is Plack::Util::header_get($res->[1], 'Content-Length'), length($res->[2]->[0]);
 };
 
 subtest 'old style' => sub {
     local $SIG{__WARN__} = sub { };
     my $res = $c->render('hoge.mt')->fillin_form({body => "hello"});
-    like $res->body(), qr{<input value="hello" name="body" type="text" />};
+    my ($input) = ($res->body =~ qr{(<input[^.>]+name="body"[^.>]+>)});
+    like $input, qr{value="hello"};
     is $res->content_length, length($res->body);
 };
 
