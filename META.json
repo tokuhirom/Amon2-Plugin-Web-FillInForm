@@ -34,7 +34,7 @@
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.38"
+            "Module::Build::Tiny" : "0.035"
          }
       },
       "develop" : {
@@ -68,6 +68,6 @@
    },
    "version" : "0.01",
    "x_contributors" : [
-      "tokuhirom <tokuhirom@gmail.com>"
+      "Tokuhiro Matsuno <tokuhirom@gmail.com>"
    ]
 }

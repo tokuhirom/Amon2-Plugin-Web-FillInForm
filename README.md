@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/tokuhirom/Amon2-Plugin-Web-FillInForm.svg?branch=master)](https://travis-ci.org/tokuhirom/Amon2-Plugin-Web-FillInForm)
 # NAME
 
 Amon2::Plugin::Web::FillInForm - HTML::FillInForm with Amon2
