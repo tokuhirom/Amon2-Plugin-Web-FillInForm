@@ -9,3 +9,11 @@ Build
 _build/
 xshelper.h
 tags
+/Amon2-Plugin-Web-FillInForm-*
+/.build
+/_build_params
+/Build
+/Build.bat
+!Build/
+!META.json
+!LICENSE
